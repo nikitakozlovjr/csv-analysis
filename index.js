@@ -25,6 +25,10 @@ const getStatistics = (content) => {
         currency < acc ? currency : acc
     );
     console.log(`Cost of currency: Min: ${min}, Max: ${max}`);
+
+    // Выводит на экран количество валют, стоимость которых лежит в диапозоне от 10 до 30 (включительно) 
+    const filt = currencys.filter((currency) => currency <= 30 && currency >= 10).length;
+    console.log(`Count currency between 10 and 30: ${filt}`);
 };
 
 export default getStatistics;
