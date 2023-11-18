@@ -15,6 +15,16 @@ const getStatistics = (content) => {
     }, []);
     const string = filters.join(', ');
     console.log(`Currency codes: ${string}`);
+
+    // Выводит максимальное и минимальное значение 
+    const currencys = strs.map((str) => str[4]);
+    const max = currencys.reduce((acc, currency) =>
+        currency > acc ? currency : acc
+    );
+    const min = currencys.reduce((acc, currency) =>
+        currency < acc ? currency : acc
+    );
+    console.log(`Cost of currency: Min: ${min}, Max: ${max}`);
 };
 
 export default getStatistics;
