@@ -1,0 +1,19 @@
+{
+  "type": "module",
+  "bin": {
+    "money": "bin/money.js"
+  },
+  "dependencies": {
+    "path": "^0.12.7"
+  },
+  "name": "csv-analysis",
+  "description": "Консольная утилита, которая анализирует переданный файл с информацией о деньгах и выводит на экран некоторую статистику по данным из файла. Файлы хранятся в директории *__fixtures__* в формате CSV.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
