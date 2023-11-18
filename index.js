@@ -29,6 +29,11 @@ const getStatistics = (content) => {
     // Выводит на экран количество валют, стоимость которых лежит в диапозоне от 10 до 30 (включительно) 
     const filt = currencys.filter((currency) => currency <= 30 && currency >= 10).length;
     console.log(`Count currency between 10 and 30: ${filt}`);
+
+    // Считает среднеарифметическое для валют USD, EUR, CHF, округляя в меньшую сторону и выводит на экран
+    const double = strs.map((str) => [str[], str[]])
+    const filtValue = letterCodes.filter((letterCode) => letterCode === 'EUR' || letterCode === 'CHF' || letterCode === 'USD');
+    console.log(filtValue);
 };
 
 export default getStatistics;
