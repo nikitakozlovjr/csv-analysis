@@ -31,9 +31,19 @@ const getStatistics = (content) => {
     console.log(`Count currency between 10 and 30: ${filt}`);
 
     // Считает среднеарифметическое для валют USD, EUR, CHF, округляя в меньшую сторону и выводит на экран
-    const double = strs.map((str) => [str[], str[]])
-    const filtValue = letterCodes.filter((letterCode) => letterCode === 'EUR' || letterCode === 'CHF' || letterCode === 'USD');
-    console.log(filtValue);
+    const dataCurrency = result
+        .map((item) => item.split(';'))
+        .reduce((acc, item) => {
+            if(item[3] === 'USD' || item[3] === 'EUR' || item[3] === 'CHF') {
+                acc.value += Number(item[4]);
+                acc.count += 1;
+            };
+
+            return acc;
+        }, {value: 0, count: 0});
+        
+    const result5 = Math.floor(dataCurrency.value / dataCurrency.count);
+    console.log(`Arithmetic mean for USD, EUR, CHF is ${result5}`);
 };
 
 export default getStatistics;
